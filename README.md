@@ -1,11 +1,13 @@
-Welcome to my LeetCode solutions repository! Here, you'll find my solutions to LeetCode problems along with key insights into the approaches I've used.
+## Introduction
+
+Welcome to my LeetCode solutions repository! Here, you'll find a collection of problem files, each containing both the problem description and my solution.
 
 ## How to Use
 
-- Navigate to the folder corresponding to the problem you're interested in.
-- Read the problem description in the file.
-- Check the provided solution for the code implementation.
-- Understand the approach, and feel free to provide feedback or suggest improvements.
+- Problems are organized by type (e.g., Arrays, Strings, Dynamic Programming) in separate folders.
+- Navigate through the folders to find the problem you're interested in.
+- Each problem is contained within a single file, named in the format `ProblemNumber_ProblemName.py` (e.g., `001_TwoSum.py`, `002_AddTwoNumbers.py`).
+- Open the file to view the problem description and solution.
 
 ## Contributing
 
