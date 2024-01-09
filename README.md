@@ -1,5 +1,3 @@
-## Introduction
-
 Welcome to my LeetCode solutions repository! Here, you'll find a collection of problem files, each containing both the problem description and my solution.
 
 ## How to Use
