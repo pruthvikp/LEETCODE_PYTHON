@@ -26,6 +26,13 @@ Constraints:
 0 <= val <= 100
 '''
 
+'''
+Approach:
+- Initialize j to 0.
+- Iterate through the list, if the element is not equal to val, update nums[j] with the current element, and increment j.
+- Return the value of j as the new length of the modified list.
+'''
+
 class Solution(object):
     def removeElement(self, nums, val):
         """
