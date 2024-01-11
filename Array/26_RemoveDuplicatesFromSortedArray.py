@@ -26,6 +26,9 @@ Constraints:
 nums is sorted in non-decreasing order.
 '''
 
+# Approach 1:
+# Initialize a pointer j to 1, iterate through the array starting from the second element.
+# Compare the current element nums[i] with the previous element nums[i - 1]. If they are different, update the array at position j with the current element nums[i].
 
 class Solution(object):
     def removeDuplicates(self, nums):
@@ -39,3 +42,16 @@ class Solution(object):
                 nums[j] = nums[i]
                 j += 1
         return j
+
+
+# Approach 2:
+# This code uses set(nums) to get unique elements, then sorts them and assigns the result back to nums. The function returns the length of the modified nums list.
+
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        nums[:]=sorted(set(nums))
+        return len(nums)
