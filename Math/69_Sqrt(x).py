@@ -1,0 +1,45 @@
+'''
+Given a non-negative integer x, return the square root of x rounded down to the nearest integer. The returned integer should be non-negative as well.
+You must not use any built-in exponent function or operator.
+For example, do not use pow(x, 0.5) in c++ or x ** 0.5 in python.
+ 
+Example 1:
+Input: x = 4
+Output: 2
+Explanation: The square root of 4 is 2, so we return 2.
+
+Example 2:
+Input: x = 8
+Output: 2
+Explanation: The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned.
+ 
+Constraints:
+0 <= x <= 231 - 1
+'''
+
+# The code implements the binary search algorithm to find the square root of a given non-negative integer x rounded down to the nearest integer. 
+# It sets up a binary search range between 1 and x. 
+# Within each iteration, it computes the midpoint and compares it with x // mid to determine whether to adjust the search range. 
+# Finally, it returns the last value found, which represents the square root rounded down to the nearest integer.
+
+
+class Solution(object):
+    def mySqrt(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        if x==0:
+            return 0
+        elif x==1:
+            return 1
+        first,last=1,x
+        while first<=last:
+            mid=first+(last-first)//2
+            if mid==x//mid:
+                return mid
+            elif mid>x//mid:
+                last=mid-1
+            else:
+                first=mid+1
+        return last
