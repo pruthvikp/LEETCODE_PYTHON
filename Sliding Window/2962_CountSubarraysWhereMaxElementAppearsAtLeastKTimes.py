@@ -46,3 +46,27 @@ class Solution:
             res+=(right-left+1)
             right+=1
         return (n*(n+1)//2)-res
+
+
+# This algorithm maintains a sliding window where the right boundary is expanded until count exceeds k, then the left boundary is shrunk until count equals k.
+# During this process, the number of subarrays with exactly k occurrences of the maximum element is accumulated in res.
+# Finally, res is returned as the result.
+
+class Solution:
+    def countSubarrays(self, nums: List[int], k: int) -> int:
+        left=right=res=count=0
+        maxi=max(nums)
+        
+        for right in range(len(nums)):
+            if nums[right]==maxi:
+                count+=1
+            
+            while count>k or (left<right and count==k and nums[left]!=maxi):
+                if nums[left]==maxi:
+                    count-=1
+                left+=1
+
+            if count==k:
+                res+=left+1
+            
+        return res
